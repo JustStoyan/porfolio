@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 5rem;
+  font-size: 28px;
+
+  .main-navigation__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+   
+    a {
+      color: green;
+    }
+  }
+}
