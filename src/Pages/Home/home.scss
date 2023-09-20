@@ -1,3 +1,5 @@
+// Animations START
+
 @keyframes show-avatar-and-description {
   0%,
   50% {
@@ -24,6 +26,9 @@
     top: 60px;
   }
 }
+
+// Animations END
+
 
 .home {
   margin-top: 60px;
@@ -80,9 +85,11 @@
 }
 
 .show-projects {
+  opacity: 1;
   position: relative;
   display: flex;
   flex-direction: column;
+  animation: show-avatar-and-description 9s;
   .show-projects__first-blinking-arrow,
   .show-projects__second-blinking-arrow::after {
     content: "";
@@ -96,11 +103,12 @@
   }
 
   .show-projects__first-blinking-arrow {
+    
     position: absolute;
     top: 20px;
     height: 30px;
     width: 30px;
-    animation: arrow-movement 2s infinite;
+    animation: arrow-movement 2s infinite,  ;
   }
 
   .show-projects__second-blinking-arrow {

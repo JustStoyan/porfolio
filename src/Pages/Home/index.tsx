@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Title } from "./Title";
 import "./home.scss";
@@ -8,7 +9,10 @@ const titleText = {
   second: "I'm Stoyan",
 };
 
+const loadedAlready = true;
+
 export const HomePage = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState(titleText.first);
   const changeTitleHandler = () => {
     setTimeout(() => {
@@ -33,7 +37,11 @@ export const HomePage = () => {
             alt="A close up of a person"
           />
         </section>
-        <section className="show-projects">
+        <section
+          onClick={() => navigate("projects")}
+          tabIndex={0}
+          className="show-projects"
+        >
           <p>Look at my work</p>
           <span className="show-projects__first-blinking-arrow"></span>
           <span className="show-projects__second-blinking-arrow"></span>
